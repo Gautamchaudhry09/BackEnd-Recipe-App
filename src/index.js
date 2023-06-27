@@ -14,8 +14,11 @@ app.use(cors());
 
 app.use("/recipes", recipeRouter);
 app.use("/auth", userRouter);
-mongoose.connect("mongodb+srv://gautam:junnu958i@cluster0.2tw5hy6.mongodb.net/Cluster0?retryWrites=true&w=majority");
-
+mongoose.connect("mongodb+srv://gautam:junnu958i@cluster0.2tw5hy6.mongodb.net/Cluster0?retryWrites=true&w=majority",
+{
+    useNewUrlParser:true
+}
+);
 // app.get("/",(req,res)=>{
 //     res.send("<h1> Hello World</h1>");
 //     console.log(db.recipes.find({}));
